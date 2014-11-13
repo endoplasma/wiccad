@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//inc/main.h=UTF-8
 encoding//inc/scheduler.h=UTF-8
+encoding//src/cdc_shell.c=UTF-8
 encoding//src/main.c=UTF-8
 encoding//src/scheduler.c=UTF-8

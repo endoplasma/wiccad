@@ -16,40 +16,60 @@ out/scheduler.o: src/scheduler.c inc/scheduler.h inc/main.h \
  c:\gccarm\arm-none-eabi\include\sys\types.h \
  c:\gccarm\arm-none-eabi\include\machine\types.h \
  c:\gccarm\arm-none-eabi\include\sys\stdio.h \
- Libraries/Device/STM32F4xx/Include/stm32f4xx.h \
- Libraries/CMSIS/Include/core_cm4.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h inc/stm32f4xx_hal_conf.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h \
+ libs/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
+ libs/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h \
+ libs/CMSIS/Include/core_cm4.h \
  c:\gccarm\lib\gcc\arm-none-eabi\4.8.3\include\stdint.h \
  c:\gccarm\arm-none-eabi\include\stdint.h \
- Libraries/CMSIS/Include/core_cmInstr.h \
- Libraries/CMSIS/Include/core_cmFunc.h \
- Libraries/CMSIS/Include/core_cm4_simd.h \
- Libraries/Device/STM32F4xx/Include/system_stm32f4xx.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_adc.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_can.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_crc.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_cryp.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dac.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dbgmcu.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dma.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_exti.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_flash.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_hash.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_gpio.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_i2c.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_iwdg.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_pwr.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rcc.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rng.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rtc.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_sdio.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_spi.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_syscfg.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_tim.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_usart.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h \
- Libraries/STM32F4xx_StdPeriph_Driver/inc/misc.h
+ libs/CMSIS/Include/core_cmInstr.h libs/CMSIS/Include/core_cmFunc.h \
+ libs/CMSIS/Include/core_cm4_simd.h \
+ libs/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cryp.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma2d.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h \
+ libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h inc/usbd_desc.h \
+ libs/STM32_USB_Device_Library/Core/Inc/usbd_def.h inc/usbd_conf.h \
+ c:\gccarm\arm-none-eabi\include\stdlib.h \
+ c:\gccarm\arm-none-eabi\include\machine\stdlib.h \
+ c:\gccarm\arm-none-eabi\include\alloca.h \
+ c:\gccarm\arm-none-eabi\include\string.h \
+ c:\gccarm\lib\gcc\arm-none-eabi\4.8.3\include-fixed\sys\cdefs.h \
+ c:\gccarm\arm-none-eabi\include\sys\string.h \
+ libs/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h \
+ libs/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
+ libs/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
+ libs/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
+ libs/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
+ libs/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h inc/usbd_cdc_if.h \
+ inc/cdc_shell.h inc/ansi.h
 
 inc/scheduler.h:
 
@@ -89,70 +109,122 @@ c:\gccarm\arm-none-eabi\include\machine\types.h:
 
 c:\gccarm\arm-none-eabi\include\sys\stdio.h:
 
-Libraries/Device/STM32F4xx/Include/stm32f4xx.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 
-Libraries/CMSIS/Include/core_cm4.h:
+inc/stm32f4xx_hal_conf.h:
+
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
+
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:
+
+libs/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:
+
+libs/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h:
+
+libs/CMSIS/Include/core_cm4.h:
 
 c:\gccarm\lib\gcc\arm-none-eabi\4.8.3\include\stdint.h:
 
 c:\gccarm\arm-none-eabi\include\stdint.h:
 
-Libraries/CMSIS/Include/core_cmInstr.h:
+libs/CMSIS/Include/core_cmInstr.h:
 
-Libraries/CMSIS/Include/core_cmFunc.h:
+libs/CMSIS/Include/core_cmFunc.h:
 
-Libraries/CMSIS/Include/core_cm4_simd.h:
+libs/CMSIS/Include/core_cm4_simd.h:
 
-Libraries/Device/STM32F4xx/Include/system_stm32f4xx.h:
+libs/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_adc.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_can.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_crc.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_cryp.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dac.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dbgmcu.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dma.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_exti.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_flash.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cryp.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma2d.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_hash.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_gpio.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_i2c.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_iwdg.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_pwr.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rcc.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rng.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rtc.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_sdio.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_spi.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_syscfg.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_tim.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_usart.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 
-Libraries/STM32F4xx_StdPeriph_Driver/inc/misc.h:
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
+
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:
+
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:
+
+libs/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h:
+
+inc/usbd_desc.h:
+
+libs/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
+
+inc/usbd_conf.h:
+
+c:\gccarm\arm-none-eabi\include\stdlib.h:
+
+c:\gccarm\arm-none-eabi\include\machine\stdlib.h:
+
+c:\gccarm\arm-none-eabi\include\alloca.h:
+
+c:\gccarm\arm-none-eabi\include\string.h:
+
+c:\gccarm\lib\gcc\arm-none-eabi\4.8.3\include-fixed\sys\cdefs.h:
+
+c:\gccarm\arm-none-eabi\include\sys\string.h:
+
+libs/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h:
+
+libs/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
+
+libs/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
+
+libs/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
+
+libs/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
+
+libs/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h:
+
+inc/usbd_cdc_if.h:
+
+inc/cdc_shell.h:
+
+inc/ansi.h:

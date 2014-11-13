@@ -39,8 +39,6 @@
 							<tool id="org.eclipse.cdt.build.core.settings.holder.105744664" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.132298078" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;C:\GCCARM\arm-none-eabi\include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/STM32F4_Test/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/STM32F4_Test/libs/STM32F4xx_StdPeriph_Driver/inc}&quot;"/>
 								</option>
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1151961771" languageId="org.eclipse.cdt.core.gcc" languageName="GNU C" sourceContentType="org.eclipse.cdt.core.cSource,org.eclipse.cdt.core.cHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>

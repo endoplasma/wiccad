@@ -66,9 +66,19 @@ AS_DEFS =
 
 # include directories (absolute or relative paths to additional folders with
 # headers, current folder is always included)
-INC_DIRS  = Libraries/STM32F4xx_StdPeriph_Driver/inc
-INC_DIRS += Libraries/CMSIS/Include
-INC_DIRS += Libraries/Device/STM32F4xx/Include
+INC_DIRS  = libs/STM32F4xx_HAL_Driver/Inc
+INC_DIRS += libs/STM32F4xx_HAL_Driver/Inc
+INC_DIRS += libs/CMSIS/Include
+INC_DIRS += libs/CMSIS/Device/ST/STM32F4xx/Include
+INC_DIRS += libs/STM32_USB_Device_Library/Class/CDC/Inc
+INC_DIRS += libs/STM32_USB_Device_Library/Core/Inc
+
+INC_DIRS += libs/LwIP/src/include/ipv4/
+INC_DIRS += libs/LwIP/src/include
+INC_DIRS += libs/LwIP/system
+
+INC_DIRS += libs/fatfs
+
 INC_DIRS += inc
 
 
@@ -84,10 +94,20 @@ LIBS = -lm
 # additional directories with source files (absolute or relative paths to
 # folders with source files, current folder is always included)
 SRCS_DIRS = src
-SRCS_DIRS += Libraries/STM32F4xx_StdPeriph_Driver/src
+SRCS_DIRS += libs/STM32F4xx_HAL_Driver/Src
+SRCS_DIRS += libs/STM32_USB_Device_Library/Class/CDC/Src
+SRCS_DIRS += libs/STM32_USB_Device_Library/Core/Src
+
+SRCS_DIRS += libs/LwIP/src/core
+SRCS_DIRS += libs/LwIP/src/core/ipv4
+SRCS_DIRS += libs/LwIP/src/core/snmp
+SRCS_DIRS += libs/LwIP/src/netif
+SRCS_DIRS += libs/LwIP/src/api
+
+SRCS_DIRS += libs/fatfs
 
 # exclude some files from compiling
-EXCLUDES =  
+EXCLUDES = src/fsdata.c
 
 # extension of C++ files
 CXX_EXT = cpp
@@ -113,7 +133,7 @@ AS_SRCS = $(wildcard $(patsubst %, %/*.$(AS_EXT), . $(SRCS_DIRS)))
 
 # optimization flags ("-O0" - no optimization, "-O1" - optimize, "-O2" -
 # optimize even more, "-Os" - optimize for size or "-O3" - optimize yet more) 
-OPTIMIZATION = -O2
+OPTIMIZATION = -O3
 
 # set to 1 to optimize size by removing unused code and data during link phase
 REMOVE_UNUSED = 1
@@ -153,7 +173,8 @@ endif
 #=============================================================================#
 
 # core flags
-CORE_FLAGS = -mcpu=$(CORE) -mthumb -mfloat-abi=softfp -mfpu=fpv4-sp-d16
+CORE_FLAGS = -mcpu=$(CORE) -mthumb -mfloat-abi=soft
+#CORE_FLAGS = -mcpu=$(CORE) -mthumb -mfloat-abi=softfp -mfpu=fpv4-sp-d16
 
 # flags for C++ compiler
 CXX_FLAGS = -std=$(CXX_STD) -g -ggdb3 -fno-rtti -fno-exceptions -fverbose-asm -Wa,-adhlns=$(OUT_DIR_F)$(notdir $(<:.$(CXX_EXT)=.lst))
